@@ -27,12 +27,11 @@
 ![GitHub forks](https://img.shields.io/github/forks/Kojinsei/wk4?label=Forks&style=social)
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## About wk4
 ## Peer-graded Assignment for Getting and Cleaning Data Course Project
 This is the peer-graded assingnment for "Week 4, Getting and Cleaning Data" by Johns Hopkins University at Coursera.
-
-Date: Dec 25, 2020
-Author: Koji Chono
+* Date: Dec 25, 2020
+* Author: Koji Chono
 
 Original data is available from UCI Machine Learning Repository
 [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
@@ -70,13 +69,6 @@ Original data is available from UCI Machine Learning Repository
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-To get a local copy up and running `source()` function
-```R
-source("wk4Script.R")
-```
-
-
 ### Prerequirements
 This script requires the following three packages
 
@@ -96,6 +88,23 @@ install.packages("dplry")
 library(dplry)
 ```
 
+
+### Run R script
+1. Download the dataset from the original repository,[Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+  - *Note:* The directory name must be `UCI HAR Dataset`
+  
+2. Store the file in your R working directory
+
+3. Download a local copy and run `source()` function
+```R
+source("wk4Script.R")
+```
+4. Check your result object `resultsData` and output file [tidyData.txt](tidyData.txt) in the working directory
+```R
+View(resultsData)
+```
+
+
 <!-- LICENSE -->
 ## License
 
@@ -113,4 +122,3 @@ Project Link: [https://github.com/Kojinsei/wk4](https://github.com/Kojinsei/wk4)
 ## Acknowledgements
 * [Coursera](https://www.coursera.org)
 * [Othneil Drew](https://github.com/othneildrew): Best-README-Template, An awesome README template to jump start your projects!
-
