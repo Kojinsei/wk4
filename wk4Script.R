@@ -1,6 +1,6 @@
 # Week 4 Peer-graded assignment####
 # Peer-graded Assignment: Getting and Cleaning Data Course Project
-# Date: Dec 25, 2020
+# Original date: Dec 25, 2020
 # Author: Koji Chono
 
 # Assignment details####
