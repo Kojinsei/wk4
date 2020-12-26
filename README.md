@@ -19,11 +19,11 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Kojinsei/wk4)
 ![GitHub](https://img.shields.io/github/license/Kojinsei/wk4)
-![GitHub Repo stars](https://img.shields.io/github/stars/Kojinsei/wk4?style=social)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/Kojinsei/wk4)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Kojinsei/wk4)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Kojinsei/wk4)
+![GitHub Repo stars](https://img.shields.io/github/stars/Kojinsei/wk4?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Kojinsei/wk4?label=Forks&style=social)
 
 <!-- ABOUT THE PROJECT -->
@@ -38,13 +38,14 @@ Original data is available from UCI Machine Learning Repository
 [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
 ## Platform and R version Information
-
+| System Info | |
+|---|---|
 | platform | x86_64-apple-darwin17.0 |
 | arch | x86_64 |
 | os | darwin17.0 |
 | system | x86_64, darwin17.0 |
 
-| status | |
+| Version status | |
 |---|---|
 | major | 4 |
 | minor | 0.2 |
@@ -52,35 +53,39 @@ Original data is available from UCI Machine Learning Repository
 | month | 06 |
 | day | 22 |
 | svn rev | 78730 |
-
 | language | R |
 | version.string | R version 4.0.2 (2020-06-22)|
 | nickname | Taking Off Again |
 | RStudio | Version 1.3.1073 |
 
 ## Files
-*wk4Script.R
-**R script file contains the assignment script.
+- wk4Script.R
+  - R script file contains the assignment script.
 
-*tidyData.txt
-** exported Datatable of resultsData using write.table() function, UTF-8 encode.
+- tidyData.txt
+  - Exported Datatable of resultsData using write.table() function, UTF-8 encode.
 
-*exScript.R
-**Extra script to merge Inertial Singals data sets.
+- exScript.R
+  - Extra script to merge Inertial Singals data sets.
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To get a local copy up and running follow these simple steps.
+To get a local copy up and running `source()` function
+```R
+source("wk4Script.R")
+```
+
 
 ### Prerequirements
 This script requires the following three packages
 
-Package [reshape2](https://cran.r-project.org/web/packages/reshape2/index.html), [tidyr](https://cran.r-project.org/web/packages/tidyr/index.html) and [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html)
+- [tidyr](https://cran.r-project.org/web/packages/tidyr/index.html)
+- [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html)
+- [reshape2](https://cran.r-project.org/web/packages/reshape2/index.html)
+  - *Notes*: reshape2 has already been retired. They recommend using tidyr package instead.
 
-Notes: reshape2 has already been retired. They recommend using tidyr package instead.
-
-'''R
+```R
 install.packages("reshape2")
 library(reshape2)
 
@@ -89,12 +94,12 @@ library(tidyr)
 
 install.packages("dplry")
 library(dplry)
-'''
+```
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
 
 
 <!-- CONTACT -->
@@ -107,5 +112,5 @@ Project Link: [https://github.com/Kojinsei/wk4](https://github.com/Kojinsei/wk4)
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 * [Coursera](https://www.coursera.org)
-* [Othneil Drew](https://github.com/othneildrew): Best-README-Template, An awesome README template to jumpstart your projects!
+* [Othneil Drew](https://github.com/othneildrew): Best-README-Template, An awesome README template to jump start your projects!
 
