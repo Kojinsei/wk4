@@ -58,13 +58,13 @@ Original data is available from UCI Machine Learning Repository
 | RStudio | Version 1.3.1073 |
 
 ## Files
-- wk4Script.R
+- [run_analysis.R](run_analysis.R)
   - R script file contains the assignment script.
 
-- tidyData.txt
+- [tidyData.txt](tidyData.txt)
   - Exported Datatable of resultsData using write.table() function, UTF-8 encode.
 
-- exScript.R
+- [exScript.R](exScript.R)
   - Extra script to merge Inertial Singals data sets.
 
 <!-- GETTING STARTED -->
@@ -97,7 +97,7 @@ library(dplry)
 
 3. Download a local copy and run `source()` function
 ```R
-source("wk4Script.R")
+source("run_analysis.R")
 ```
 4. Check your result object `resultsData` and output file [tidyData.txt](tidyData.txt) in the working directory
 ```R
