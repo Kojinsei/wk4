@@ -17,6 +17,20 @@ library(tidyr)
 library(dplyr)
 library(reshape2)
 
+# Load dataset from Coursera
+filename <- "Coursera_wk4_Final.zip"
+
+# Checking Archive.
+if (!file.exists(filename)){
+      fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+      download.file(fileURL, filename, method="curl")
+}  
+
+# Checking Folder.
+if (!file.exists("UCI HAR Dataset")) { 
+      unzip(filename) 
+}
+
 # 1. Merges the training and the test sets to create one data set.####
 # AND 4. Appropriately labels the data set with descriptive variable names.
 
