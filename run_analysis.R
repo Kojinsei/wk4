@@ -13,9 +13,10 @@
 # Extra: Merge Inertial Signals
 
 # 0. Load libraries required in this R script####
-library(tidyr)
-library(dplyr)
-library(reshape2)
+require(tidyr)
+require(dplyr)
+require(reshape2)
+require(data.table)
 
 # Load dataset from Coursera
 filename <- "Coursera_wk4_Final.zip"
@@ -34,29 +35,29 @@ if (!file.exists("UCI HAR Dataset")) {
 # 1. Merges the training and the test sets to create one data set.####
 # AND 4. Appropriately labels the data set with descriptive variable names.
 
-columnNames <- read.table("./UCI HAR Dataset/features.txt", header = FALSE)
+columnNames <- fread("./UCI HAR Dataset/features.txt", header = FALSE)
 features <- columnNames[, 2]
 
 # Test data: load test data and label the data set, SubjectID and ActivityID
-subjectID <- read.table("./UCI HAR Dataset/test/subject_test.txt", header = FALSE)
+subjectID <- fread("./UCI HAR Dataset/test/subject_test.txt", header = FALSE)
 names(subjectID) <- "SubjectID"
 
-testActivityLabels <- read.table("./UCI HAR Dataset/test/y_test.txt", header = FALSE)
+testActivityLabels <- fread("./UCI HAR Dataset/test/y_test.txt", header = FALSE)
 names(testActivityLabels) <- "ActivityID"
 
-testX <- read.table("./UCI HAR Dataset/test/x_test.txt", header = FALSE)
-names(testX) <- features
+testX <- fread("./UCI HAR Dataset/test/x_test.txt", header = FALSE)
+names(testX) <- features$V2
 test <- cbind(subjectID, testActivityLabels, testX)
 
 # Train data: load train data and label the data set, SubjectID and ActivityID
-subjectID <- read.table("./UCI HAR Dataset/train/subject_train.txt", header = FALSE)
+subjectID <- fread("./UCI HAR Dataset/train/subject_train.txt", header = FALSE)
 names(subjectID) <- "SubjectID"
 
-trainActivityLabels <- read.table("./UCI HAR Dataset/train/y_train.txt", header = FALSE)
+trainActivityLabels <- fread("./UCI HAR Dataset/train/y_train.txt", header = FALSE)
 names(trainActivityLabels) <- "ActivityID"
 
-trainX <- read.table("./UCI HAR Dataset/train/x_train.txt", header = FALSE)
-names(trainX) <- features
+trainX <- fread("./UCI HAR Dataset/train/x_train.txt", header = FALSE)
+names(trainX) <- features$V2
 train <- cbind(subjectID, trainActivityLabels, trainX)
 
 # Merge test data and train data
