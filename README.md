@@ -87,16 +87,15 @@ rm(requiredPkgs)
 
 
 ### Run R script
-1. Download the dataset from the original repository,[Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
-  - *Note:* The directory name must be `UCI HAR Dataset`
-  
-2. Store the file in your R working directory
+The original data sets are [Human Activity Recognition Using Smartphones Data Set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
-3. Download a local copy and run `source()` function
+1. Download a local copy of `run_analysis.R` and run `source()` function
 ```R
 source("run_analysis.R")
 ```
-4. Check your result object `resultsData1` and `resultsData2` and output files [tidyData1.txt](tidyData1.txt) and [tidyData2.txt](tidyData2.txt) in the working directory, respectively.
+   - *Notes*: For more information of the objects in the script, please see [Codebook.md](Codebook.md).
+
+2. Check your result object `resultsData1` and `resultsData2` and output files [tidyData1.txt](tidyData1.txt) and [tidyData2.txt](tidyData2.txt) in the working directory, respectively.
 ```R
 View(resultsData1) #or simply resultsData1
 View(resultsData2) #or simply resultsData2
