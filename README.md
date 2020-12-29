@@ -61,8 +61,9 @@ Original data is available from UCI Machine Learning Repository
 - [run_analysis.R](run_analysis.R)
   - R script file contains the assignment script.
 
-- [tidyData.txt](tidyData.txt)
-  - Exported Datatable of resultsData using write.table() function, UTF-8 encode.
+- [tidyData1.txt](tidyData1.txt)
+- [tidyData2.txt](tidyData1.txt)
+  - Exported Data tables of resultsData1 and resultsData2 using `fwrite()` function.
 
 - [exScript.R](exScript.R)
   - Extra script to merge Inertial Singals data sets.
@@ -75,17 +76,13 @@ This script requires the following three packages
 - [tidyr](https://cran.r-project.org/web/packages/tidyr/index.html)
 - [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html)
 - [reshape2](https://cran.r-project.org/web/packages/reshape2/index.html)
+- [data.table](https://cran.r-project.org/web/packages/data.table/index.html)
   - *Notes*: reshape2 has already been retired. They recommend using tidyr package instead.
 
 ```R
-install.packages("reshape2")
-library(reshape2)
-
-install.packages("tidyr")
-library(tidyr)
-
-install.packages("dplry")
-library(dplry)
+requiredPkgs <- c("tidyr", "dplyr", "reshape2", "data.table")
+sapply(requiredPkgs, require, character.only=TRUE, quietly=FALSE)
+rm(requiredPkgs)
 ```
 
 
@@ -99,9 +96,10 @@ library(dplry)
 ```R
 source("run_analysis.R")
 ```
-4. Check your result object `resultsData` and output file [tidyData.txt](tidyData.txt) in the working directory
+4. Check your result object `resultsData1` and `resultsData2` and output files [tidyData1.txt](tidyData1.txt) and [tidyData2.txt](tidyData2.txt) in the working directory, respectively.
 ```R
-View(resultsData)
+View(resultsData1) #or simply resultsData1
+View(resultsData2) #or simply resultsData2
 ```
 
 
